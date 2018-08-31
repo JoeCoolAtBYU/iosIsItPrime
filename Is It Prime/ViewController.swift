@@ -18,7 +18,9 @@ class ViewController: UIViewController {
         if let userEnteredString = numberTextField.text{
             let userEnteredInteger = Int(userEnteredString)
             if let number = userEnteredInteger {
+                if number < 1000000000{
                 var isPrime = true
+                
                 if number == 1 {
                     isPrime = false
                 }
@@ -36,6 +38,9 @@ class ViewController: UIViewController {
                     resultlabel.text = "\(number) is a prime number."
                 } else {
                     resultlabel.text = "\(number) is not a prime number."
+                }
+                } else {
+                    resultlabel.text = "Please enter a smaller number I'm only a mobile device."
                 }
             } else {
                 resultlabel.text = "Please enter a positive whole number."
